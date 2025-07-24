@@ -86,18 +86,18 @@ const fetchClientMov = async (req, res) => {
     const id=req.params.id
     const query = `
       SELECT
-    mv.*,
-    ar.intit_article
-FROM
-    FICH_mouvements mv
-JOIN
-    fich_articles ar
-    ON mv.mvt_article = ar.code_article
-WHERE
-    MVT_CPT_CL_FR = '${id}'
-    AND mvt_type_doc = 'FC'
-ORDER BY
-    mv.mvt_date DESC
+        mv.*,
+        ar.intit_article
+      FROM
+         FICH_mouvements mv
+      JOIN
+          fich_articles ar
+          ON mv.mvt_article = ar.code_article
+      WHERE
+          MVT_CPT_CL_FR = '${id}'
+          AND mvt_type_doc = 'FC'
+      ORDER BY
+          mv.mvt_date DESC
 
     `;
 
@@ -132,6 +132,7 @@ const fetchFacture = async (req, res) => {
         fc.FC_ACOMPTE,
         fc.FC_UTILIS,
         fc.FC_LIBEL,
+        fc.REGL_FC,
 
         cli.INTITULE_CLIENT,
         cli.ADR_C_FACT_1,

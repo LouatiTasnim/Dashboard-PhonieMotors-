@@ -5,6 +5,7 @@ const path = require('path'); // ajoute path pour gérer les chemins
 const clientRouter = require('./routes/clientRouter');
 const depotRouter = require('./routes/depotRouter');
 const dashboardRouter = require('./routes/dashboardRouter');
+const reglementCRouter = require('./routes/reglementCRouter');
 
 const app = express();
 const port = 4000;
@@ -16,6 +17,7 @@ app.use(express.json());
 app.use('/', clientRouter);
 app.use('/', depotRouter);
 app.use('/', dashboardRouter);
+app.use('/', reglementCRouter);
 
 // servir les fichiers statiques du frontend (dossier dist généré par Vite)
 //app.use(express.static(path.join(__dirname, '../frontend/dist')));
