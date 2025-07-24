@@ -44,14 +44,14 @@ const _nav = [
   },
   {
     component: CNavItem,
-    name: 'Chèques impayés',
+    name: 'Impayés',
     to: '/vente/ChequesImpayes',
     icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
   },
   {
     component: CNavItem,
-    name: 'Chèques non payés',
-    to: '/vente/ChequesNonPay',
+    name: 'Non payés',
+    to: '/vente/NonPaye',
     icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
   },
   {

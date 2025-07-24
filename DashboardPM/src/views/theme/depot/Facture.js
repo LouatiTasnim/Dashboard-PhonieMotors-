@@ -99,7 +99,7 @@ const FactureDetails = () => {
             <p><span style={labelStyle}>Adresse :</span> <span style={valueStyle}>{entete.ADR_C_FACT_1}</span></p>
             <p><span style={labelStyle}>Date :</span> <span style={valueStyle}>{entete.DATE_FC ? new Date(entete.DATE_FC).toLocaleDateString() : '-'}</span></p>
             <p><span style={labelStyle}>Représentant :</span> <span style={valueStyle}>{entete.INTITULE_REPRES || '-'}</span></p>
-            <p><span style={labelStyle}>Agent :</span> <span style={valueStyle}>{entete.FC_UTILIS || '-'}</span></p>
+            <p><span style={labelStyle}>Réglement :</span> <span style={valueStyle}>{formatCurrency(entete.REGL_FC) || '-'}</span></p>
             <p><span style={labelStyle}>Échéance :</span> <span style={valueStyle}>{entete.ECHEANCE_FC ? new Date(entete.ECHEANCE_FC).toLocaleDateString() : '-'}</span></p>
             <p><span style={labelStyle}>Mode de règlement :</span> <span style={valueStyle}>{entete.MODE_REGL_FC || '-'}</span></p>
             <p><span style={labelStyle}>État :</span>
